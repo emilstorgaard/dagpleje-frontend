@@ -18,7 +18,7 @@
   <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
   <p class="w-16 h-16 mx-auto mb-6 text-3xl">🌳</p>
     <h1 class="text-5xl md:text-6xl font-bold mb-6">
-      Velkommen til Solstråle Dagpleje
+      Velkommen til Dagpleje
     </h1>
     <p class="text-xl md:text-2xl mb-8">
       Et trygt og kærligt hjem for dit barn
