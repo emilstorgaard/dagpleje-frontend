@@ -19,19 +19,15 @@
 	];
 </script>
 
-<section id="dagsprogram" class="bg-pink-50 px-4 py-20">
+<section id="dagsprogram" class="bg-green-50 px-4 py-20">
 	<div class="mx-auto max-w-4xl">
 		<h2 class="mb-12 text-center text-4xl font-bold text-gray-800">En typisk dag</h2>
 
 		<div class="rounded-lg border bg-white p-8 shadow-xl">
 			<div class="space-y-4">
 				{#each scheduleItems as item}
-					<div class="flex items-start gap-4 rounded-lg p-4 transition-colors hover:bg-pink-50">
-						<img
-							src={logo}
-							alt="Solstråle Dagpleje logo"
-							class="mt-1 h-6 w-6 flex-shrink-0 text-pink-500"
-						/>
+					<div class="flex items-start gap-4 rounded-lg p-4 transition-colors hover:bg-green-50">
+						<p class="mt-1 h-12 w-20 flex-shrink-0 text-green-500 text-5xl">🕓</p>
 						<div class="flex-1">
 							<div class="font-semibold text-gray-800">{item.time}</div>
 							<div class="text-gray-600">{item.activity}</div>

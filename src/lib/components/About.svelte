@@ -1,4 +1,4 @@
-<section id="om-mig" class="py-20 px-4 bg-pink-50">
+<section id="om-mig" class="py-20 px-4 bg-green-50">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
       Om mig
@@ -13,7 +13,7 @@
       </div>
       <div class="space-y-6">
         <p class="text-lg text-gray-700">
-          Hej! Mit navn er <strong>Maria Hansen</strong>, og jeg har været dagplejer i over 10 år.
+          Hej! Mit navn er <strong>Eline Storgaard Andersen</strong>, og jeg har været dagplejer i over 10 år.
           Jeg elsker mit arbejde og elsker at se børn udvikle sig og trives.
         </p>
         <p class="text-lg text-gray-700">

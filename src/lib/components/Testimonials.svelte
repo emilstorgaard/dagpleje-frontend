@@ -35,11 +35,7 @@
 				<div class="rounded-lg border bg-white p-6 shadow-sm transition-shadow hover:shadow-xl">
 					<div class="mb-4 flex gap-1">
 						{#each Array(5) as _}
-							<img
-								src={logo}
-								alt="Solstråle Dagpleje logo"
-								class="h-5 w-5 fill-yellow-400 text-yellow-400"
-							/>
+							<p class="text-xl fill-yellow-400 text-yellow-400">⭐</p>
 						{/each}
 					</div>
 					<p class="mb-4 text-gray-700 italic">"{testimonial.text}"</p>

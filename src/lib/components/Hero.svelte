@@ -16,7 +16,7 @@
   <div class="absolute inset-0 bg-black/40"></div>
 
   <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-    <img src={logo} alt="Solstråle Dagpleje logo" class="w-16 h-16 mx-auto mb-6 text-pink-300" />
+  <p class="w-16 h-16 mx-auto mb-6 text-3xl">🌳</p>
     <h1 class="text-5xl md:text-6xl font-bold mb-6">
       Velkommen til Solstråle Dagpleje
     </h1>
@@ -25,7 +25,7 @@
     </p>
     <button
       on:click={scrollToContact}
-      class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-6 text-lg rounded-md transition-colors"
+      class="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg rounded-md transition-colors"
     >
       Kontakt mig
     </button>
