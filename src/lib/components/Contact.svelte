@@ -1,67 +1,107 @@
-<section id="kontakt" class="bg-green-50 px-4 py-20">
-	<div class="mx-auto max-w-4xl">
-		<h2 class="mb-12 text-center text-4xl font-bold text-gray-800">Kontakt mig</h2>
+<section id="kontakt" class="relative overflow-hidden bg-green-50 px-4 py-24">
+	<!-- Decorative blobs -->
+	<div class="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-white/60 blur-3xl"></div>
+	<div class="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-green-100/60 blur-3xl"></div>
 
-		<div class="rounded-lg border bg-white p-8 shadow-xl">
-			<div class="grid gap-8 md:grid-cols-2">
-				<div class="space-y-6">
-					<div class="flex items-start gap-4">
-						<p class="mt-1 h-6 w-6 flex-shrink-0 text-xl text-green-500">📞</p>
-						<div>
-							<h3 class="mb-1 font-semibold text-gray-800">Telefon</h3>
-							<a href="tel:+4512345678" class="text-green-600 hover:underline"> +45 12 34 56 78 </a>
-						</div>
-					</div>
+	<div class="relative mx-auto max-w-4xl">
+		<!-- Header -->
+		<div class="mb-4 flex justify-center">
+			<span class="rounded-full bg-green-100 px-4 py-1.5 text-sm font-semibold tracking-widest text-green-700 uppercase">
+				Kontakt
+			</span>
+		</div>
+		<h2 class="mb-4 text-center text-4xl font-bold text-gray-800 md:text-5xl">
+			Lad os tage en snak
+		</h2>
+		<p class="mb-16 text-center text-lg text-gray-500">
+			Jeg glæder mig til at høre fra dig
+		</p>
 
-					<div class="flex items-start gap-4">
-						<p class="mt-1 h-6 w-6 flex-shrink-0 text-xl text-green-500">✉️</p>
-						<div>
-							<h3 class="mb-1 font-semibold text-gray-800">Email</h3>
-							<a href="mailto:eline@storgaardandersen.dk" class="text-green-600 hover:underline">
-								eline@storgaardandersen.dk
-							</a>
-						</div>
-					</div>
+		<div class="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl">
+			<div class="grid md:grid-cols-2">
 
-					<div class="flex items-start gap-4">
-						<p class="mt-1 h-6 w-6 flex-shrink-0 text-xl text-green-500">📍</p>
-						<div>
-							<h3 class="mb-1 font-semibold text-gray-800">Adresse</h3>
-							<p class="text-gray-700">
-								Svinglen 16<br />
-								8800 Viborg
-							</p>
-						</div>
-					</div>
+				<!-- Contact info -->
+				<div class="space-y-6 p-8 md:p-10">
+					<h3 class="text-xl font-bold text-gray-800">Kontaktoplysninger</h3>
 
-					<div class="flex items-start gap-4">
-						<p class="mt-1 h-6 w-6 flex-shrink-0 text-xl text-green-500">🕓</p>
-						<div>
-							<h3 class="mb-1 font-semibold text-gray-800">Åbningstider</h3>
-							<p class="text-gray-700">
-								Mandag - Fredag<br />
-								7:00 - 17:00
-							</p>
+					{#each [
+						{ emoji: '📞', label: 'Telefon', content: '+45 12 34 56 78', href: 'tel:+4512345678' },
+						{ emoji: '✉️', label: 'Email', content: 'eline@storgaardandersen.dk', href: 'mailto:eline@storgaardandersen.dk' },
+					] as item}
+						<a
+							href={item.href}
+							class="group flex items-center gap-4 rounded-2xl border border-gray-100 p-4 transition-all duration-200 hover:border-green-200 hover:bg-green-50 hover:shadow-sm"
+						>
+							<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-green-100 text-2xl transition-transform duration-200 group-hover:scale-110">
+								{item.emoji}
+							</div>
+							<div>
+								<p class="text-xs font-semibold tracking-wide text-gray-400 uppercase">{item.label}</p>
+								<p class="font-semibold text-green-600">{item.content}</p>
+							</div>
+						</a>
+					{/each}
+
+					{#each [
+						{ emoji: '📍', label: 'Adresse', lines: ['Svinglen 16', '8800 Viborg'] },
+						{ emoji: '🕐', label: 'Åbningstider', lines: ['Mandag – Fredag', '7:00 – 17:00'] },
+					] as item}
+						<div class="flex items-center gap-4 rounded-2xl border border-gray-100 p-4">
+							<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-green-100 text-2xl">
+								{item.emoji}
+							</div>
+							<div>
+								<p class="text-xs font-semibold tracking-wide text-gray-400 uppercase">{item.label}</p>
+								{#each item.lines as line}
+									<p class="font-semibold text-gray-700">{line}</p>
+								{/each}
+							</div>
 						</div>
-					</div>
+					{/each}
 				</div>
 
-				<div class="rounded-lg bg-green-50 p-6">
-					<h3 class="mb-4 text-xl font-semibold text-gray-800">Ledige pladser</h3>
-					<p class="mb-4 text-gray-700">
-						Jeg har aktuelt <strong class="text-green-600">2 ledige pladser</strong> fra august 2026.
-					</p>
-					<p class="mb-6 text-gray-700">
-						Er du interesseret i at høre mere om dagplejen eller se vores lokaler? Så er du meget
-						velkommen til at kontakte mig for en uforpligtende snak.
-					</p>
-					<div class="rounded-lg border-2 border-green-200 bg-white p-4">
-						<p class="text-sm text-gray-600">
-							💝 Jeg tilbyder også introduktionsforløb, så dit barn kan vænne sig til dagplejen i
-							eget tempo
+				<!-- Availability panel -->
+				<div class="flex flex-col justify-between bg-gradient-to-br from-green-500 to-green-600 p-8 text-white md:p-10">
+					<div>
+						<div class="mb-6 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 backdrop-blur-sm">
+							<span class="h-2 w-2 animate-pulse rounded-full bg-green-300"></span>
+							<span class="text-sm font-semibold">Ledige pladser nu</span>
+						</div>
+
+						<h3 class="mb-4 text-2xl font-bold">
+							2 ledige pladser<br />fra august 2026
+						</h3>
+
+						<p class="mb-8 leading-relaxed text-white/85">
+							Er du interesseret i at høre mere eller se vores lokaler? Kontakt mig for en
+							uforpligtende snak — jeg svarer altid inden for 24 timer.
 						</p>
+
+						<div class="rounded-2xl bg-white/15 p-4 backdrop-blur-sm">
+							<p class="text-sm leading-relaxed text-white/90">
+								💝 Jeg tilbyder introduktionsforløb, så dit barn kan vænne sig til dagplejen i eget tempo
+							</p>
+						</div>
+					</div>
+
+					<div class="mt-8 flex flex-col gap-3">
+						
+						<a
+							href="tel:+4512345678"
+							class="flex items-center justify-center gap-2 rounded-full bg-white py-3 text-center font-bold text-green-600 shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
+						>
+							📞 Ring til mig
+						</a>
+						
+						<a
+							href="mailto:eline@storgaardandersen.dk"
+							class="flex items-center justify-center gap-2 rounded-full border-2 border-white/50 py-3 text-center font-semibold text-white transition-all hover:bg-white/10"
+						>
+							✉️ Send en email
+						</a>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>

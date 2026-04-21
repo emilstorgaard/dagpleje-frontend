@@ -1,33 +1,57 @@
 <script lang="ts">
-	import logo from '$lib/assets/favicon.svg';
-
   function scrollToContact(): void {
     document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' });
   }
 </script>
 
-<section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+<section class="relative flex h-[680px] items-center justify-center overflow-hidden">
   <img
     src="https://images.unsplash.com/photo-1774641374101-0c5a243b7e7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNoaWxkcmVuJTIwcGxheWluZyUyMGRheWNhcmV8ZW58MXx8fHwxNzc2NzkwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080"
     alt="Glade børn der leger"
-    class="absolute inset-0 w-full h-full object-cover"
+    class="absolute inset-0 h-full w-full object-cover scale-105"
+    style="transform-origin: center;"
   />
 
-  <div class="absolute inset-0 bg-black/40"></div>
+  <!-- Layered gradient for depth -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
 
-  <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-  <p class="w-16 h-16 mx-auto mb-6 text-3xl">🌳</p>
-    <h1 class="text-5xl md:text-6xl font-bold mb-6">
-      Velkommen til Dagpleje
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center text-white">
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 backdrop-blur-sm">
+      <span class="text-lg">🌳</span>
+      <span class="text-sm font-medium tracking-widest uppercase">Eline Storgaard Andersen</span>
+    </div>
+
+    <h1 class="mb-6 text-5xl font-bold leading-tight drop-shadow-lg md:text-7xl">
+      Velkommen til<br />
+      <span class="text-green-300">Dagpleje</span>
     </h1>
-    <p class="text-xl md:text-2xl mb-8">
+
+    <p class="mx-auto mb-10 max-w-xl text-xl text-white/90 md:text-2xl">
       Et trygt og kærligt hjem for dit barn
     </p>
-    <button
-      on:click={scrollToContact}
-      class="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg rounded-md transition-colors"
-    >
-      Kontakt mig
-    </button>
+
+    <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <button
+        on:click={scrollToContact}
+        class="rounded-full bg-green-500 px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-green-400 hover:shadow-green-500/30 hover:shadow-xl hover:-translate-y-0.5"
+      >
+        Kontakt mig
+      </button>
+      
+      <a
+        href="#om-mig"
+        class="rounded-full border border-white/50 bg-white/10 px-10 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
+      >
+        Læs mere
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/60">
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
   </div>
 </section>
