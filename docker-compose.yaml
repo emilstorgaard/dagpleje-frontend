@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: dagpleje_frontend:latest
+    ports:
+      - '8480:8480'
