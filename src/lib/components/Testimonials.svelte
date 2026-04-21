@@ -11,17 +11,17 @@
 		{
 			name: 'Anne og Peter',
 			child: 'Lucas, 2 år',
-			text: 'Maria er fantastisk! Vores søn trives enormt hos hende. Hun er kærlig, tålmodig og har en fantastisk evne til at skabe trygge rammer. Vi kan varmt anbefale hende!'
+			text: 'Eline er fantastisk! Vores søn trives enormt hos hende. Hun er kærlig, tålmodig og har en fantastisk evne til at skabe trygge rammer. Vi kan varmt anbefale hende!'
 		},
 		{
 			name: 'Sarah',
 			child: 'Emma, 1 år',
-			text: 'Det bedste valg vi har truffet. Emma elsker at komme i dagpleje, og vi kan mærke hvor glad og tilfreds hun er. Maria er super dygtig og kommunikationen er altid i top!'
+			text: 'Det bedste valg vi har truffet. Emma elsker at komme i dagpleje, og vi kan mærke hvor glad og tilfreds hun er. Eline er super dygtig og kommunikationen er altid i top!'
 		},
 		{
 			name: 'Michael og Louise',
 			child: 'Noah, 3 år',
-			text: 'Vi er så taknemmelige for at have fundet Maria. Hun har fulgt vores søn siden han var 8 måneder, og vi kan se hvor meget han har udviklet sig. Hendes engagement er enestående!'
+			text: 'Vi er så taknemmelige for at have fundet Eline. Hun har fulgt vores søn siden han var 8 måneder, og vi kan se hvor meget han har udviklet sig. Hendes engagement er enestående!'
 		}
 	];
 </script>

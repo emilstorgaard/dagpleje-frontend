@@ -17,7 +17,7 @@
 						<p class="mt-1 h-6 w-6 flex-shrink-0 text-xl text-green-500">✉️</p>
 						<div>
 							<h3 class="mb-1 font-semibold text-gray-800">Email</h3>
-							<a href="mailto:maria@solstraale-dagpleje.dk" class="text-green-600 hover:underline">
+							<a href="mailto:eline@storgaardandersen.dk" class="text-green-600 hover:underline">
 								eline@storgaardandersen.dk
 							</a>
 						</div>
