@@ -3,7 +3,7 @@ FROM node:lts-alpine AS builder
 
 WORKDIR /usr/src/app
 
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json .npmrc ./
 RUN npm ci
 
 COPY . .
