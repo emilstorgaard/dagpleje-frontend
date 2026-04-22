@@ -1,20 +1,25 @@
-# Use official Node.js image as base
-FROM node:latest
+# Build stage
+FROM node:lts-alpine AS builder
 
-# Set working directory inside the container
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json files
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
 COPY . .
-
-# Install dependencies
-RUN yarn
-
-# Copy the rest of the application code
 RUN yarn build
 
-# Expose port 8480 to the outside world
+# Production stage
+FROM node:lts-alpine
+
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/build build/
+COPY --from=builder /usr/src/app/package.json .
+COPY --from=builder /usr/src/app/yarn.lock .
+
+RUN yarn install --frozen-lockfile --production
+
 EXPOSE 8480
 
-# Command to run the application
-CMD ["yarn", "preview", "--", "--port", "8480", "--host", "0.0.0.0"]
+CMD ["node", "build"]

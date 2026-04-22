@@ -1,12 +1,10 @@
 <script lang="ts">
-	import Header from '$lib/components/Header.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import About from '$lib/components/About.svelte';
 	import Activities from '$lib/components/Activities.svelte';
 	import Schedule from '$lib/components/Schedule.svelte';
 	import Testimonials from '$lib/components/Testimonials.svelte';
 	import Contact from '$lib/components/Contact.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -18,7 +16,6 @@
 </svelte:head>
 
 <div class="min-h-screen font-nunito">
-	<Header />
 	<main>
 		<Hero />
 		<About />
@@ -27,7 +24,6 @@
 		<Testimonials />
 		<Contact />
 	</main>
-	<Footer />
 </div>
 
 <style>

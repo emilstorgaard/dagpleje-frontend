@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logo from '$lib/assets/favicon.svg';
+	let { class: className = '' } = $props();
 
 	let isMenuOpen: boolean = $state(false);
 
@@ -13,7 +13,6 @@
 		{ label: 'Aktiviteter', href: '#aktiviteter' },
 		{ label: 'Dagsprogram', href: '#dagsprogram' },
 		{ label: 'Anmeldelser', href: '#anmeldelser' },
-		{ label: 'Kontakt', href: '#kontakt' }
 	];
 
 	function handleNavClick(href: string): void {
@@ -23,7 +22,7 @@
 	}
 </script>
 
-<header class="sticky top-0 z-50 border-b border-white/20 bg-white/80 shadow-sm backdrop-blur-md transition-all">
+<header class="sticky z-50 border-b border-white/20 bg-white/80 shadow-sm backdrop-blur-md transition-all {className}">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-20 items-center justify-between">
 

@@ -38,10 +38,10 @@
 
 	function pauseAndResume(): void {
 		clearInterval(interval);
-		interval = setInterval(next, 4000);
+		interval = setInterval(next, 3000);
 	}
 
-	onMount(() => { interval = setInterval(next, 4000); });
+	onMount(() => { interval = setInterval(next, 3000); });
 	onDestroy(() => clearInterval(interval));
 </script>
 
@@ -65,7 +65,7 @@
 			class="relative mb-20 overflow-hidden rounded-3xl shadow-2xl"
 			style="height: 440px;"
 			on:mouseenter={() => clearInterval(interval)}
-			on:mouseleave={() => { interval = setInterval(next, 4000); }}
+			on:mouseleave={() => { interval = setInterval(next, 3000); }}
 		>
 			{#each slides as slide, i}
 				<div
