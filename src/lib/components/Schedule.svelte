@@ -39,26 +39,27 @@
 
 		<!-- Timeline -->
 		<div class="relative">
-			<!-- Vertical line -->
-			<div class="absolute top-0 bottom-0 left-[2.35rem] w-px bg-green-200 md:left-1/2"></div>
+			<!-- Vertical line — left-[1.125rem] = halvdelen af emoji-dottens w-9 -->
+			<div class="absolute bottom-0 top-0 left-[1.125rem] w-px bg-green-200 md:left-1/2"></div>
 
 			<div class="space-y-4">
 				{#each scheduleItems as item, i}
 					<div class="relative flex items-center gap-4 md:gap-0 {i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}">
+
 						<!-- Card -->
-						<div class="ml-16 flex-1 md:ml-0 {i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}">
-							<div class="group rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-green-200 hover:shadow-md">
+						<div class="ml-12 flex-1 md:ml-0 {i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}">
+							<div class="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-green-200 hover:shadow-md">
 								<p class="mb-0.5 text-sm font-bold text-green-600">{item.time}</p>
 								<p class="font-semibold text-gray-800">{item.activity}</p>
 							</div>
 						</div>
 
 						<!-- Center dot with emoji -->
-						<div class="absolute left-4 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border-4 border-green-50 bg-white shadow-md text-lg md:left-1/2 md:-translate-x-1/2">
+						<div class="absolute left-0 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border-4 border-green-50 bg-white text-lg shadow-md md:left-1/2 md:-translate-x-1/2">
 							{item.emoji}
 						</div>
 
-						<!-- Empty spacer for alternating layout on desktop -->
+						<!-- Spacer for alternating desktop layout -->
 						<div class="hidden flex-1 md:block"></div>
 					</div>
 				{/each}

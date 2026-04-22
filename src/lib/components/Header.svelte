@@ -22,7 +22,7 @@
 	}
 </script>
 
-<header class="sticky z-50 border-b border-white/20 bg-white/80 shadow-sm backdrop-blur-md transition-all {className}">
+<header class="z-50 border-b border-white/20 bg-white/80 shadow-sm backdrop-blur-md transition-all">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-20 items-center justify-between">
 

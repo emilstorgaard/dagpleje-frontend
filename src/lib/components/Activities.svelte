@@ -117,17 +117,21 @@
 			</div>
 		</div>
 
-		<!-- Activity cards -->
-		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-			{#each activities as activity}
-				<div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-200 hover:shadow-lg">
-					<div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-50 text-3xl transition-transform duration-300 group-hover:scale-110">
-						{activity.icon}
-					</div>
-					<h3 class="mb-2 text-lg font-bold text-gray-800">{activity.title}</h3>
-					<p class="leading-relaxed text-gray-500">{activity.description}</p>
-				</div>
-			{/each}
-		</div>
+<!-- Activity cards -->
+<div class="flex gap-4 overflow-x-auto pb-4 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-3"
+     style="-webkit-overflow-scrolling: touch; scrollbar-width: none;">
+    {#each activities as activity}
+        <div class="group flex w-64 flex-shrink-0 flex-col rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-200 hover:shadow-lg sm:w-auto">
+            <div class="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-green-50 text-2xl transition-transform duration-300 group-hover:scale-110">
+                {activity.icon}
+            </div>
+            <h3 class="mb-1 text-base font-bold text-gray-800">{activity.title}</h3>
+            <p class="text-sm leading-relaxed text-gray-500">{activity.description}</p>
+        </div>
+    {/each}
+</div>
+
+<!-- Scroll hint (kun mobil) -->
+<p class="mt-2 text-center text-xs text-gray-400 sm:hidden">Swipe for at se mere →</p>
 	</div>
 </section>

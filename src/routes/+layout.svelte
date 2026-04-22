@@ -10,7 +10,10 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<AnnouncementBar />
-<Header class="top-8" />
+<div class="sticky top-0 z-50">
+	<AnnouncementBar />
+	<Header />
+</div>
+
 {@render children()}
 <Footer />
