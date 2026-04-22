@@ -32,7 +32,7 @@
 				class="group flex items-center gap-3 transition-opacity hover:opacity-80"
 			>
 				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-xl transition-transform group-hover:scale-110">
-					🌳
+					<img src="/logo.png" alt="Logo"/>
 				</div>
 				<div class="text-left">
 					<span class="block text-lg font-bold leading-tight text-gray-800">Dagpleje</span>

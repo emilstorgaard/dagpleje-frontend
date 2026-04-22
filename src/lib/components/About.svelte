@@ -25,7 +25,9 @@
 				/>
 				<!-- Floating badge -->
 				<div class="absolute -bottom-5 -right-5 flex items-center gap-3 rounded-2xl bg-white px-5 py-4 shadow-lg">
-					<span class="text-3xl">🌳</span>
+					<span class="text-3xl">
+						<img src="/logo.png" alt="Logo" class="h-10 w-10 object-contain"/>
+					</span>
 					<div>
 						<p class="text-xs font-medium text-gray-500">Erfaring</p>
 						<p class="text-lg font-bold text-gray-800">10+ år</p>

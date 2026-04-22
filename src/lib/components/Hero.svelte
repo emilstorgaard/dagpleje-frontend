@@ -18,7 +18,9 @@
 
   <div class="relative z-10 mx-auto max-w-4xl px-4 text-center text-white">
     <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 backdrop-blur-sm">
-      <span class="text-lg">🌳</span>
+      <span class="text-lg">
+        <img src="/logo.png" alt="Logo" class="h-10 w-10 object-contain"/>
+      </span>
       <span class="text-sm font-medium tracking-widest uppercase">Eline Storgaard Andersen</span>
     </div>
 

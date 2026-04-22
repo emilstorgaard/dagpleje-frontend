@@ -8,7 +8,7 @@
 			<div>
 				<div class="mb-4 flex items-center gap-3">
 					<div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-500/20 text-2xl">
-						🌳
+						<img src="/logo.png" alt="Logo" class="h-10 w-10 object-contain"/>
 					</div>
 					<span class="text-xl font-bold">Dagpleje</span>
 				</div>
