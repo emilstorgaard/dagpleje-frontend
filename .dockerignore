@@ -13,12 +13,6 @@ build
 .cachedir
 cache
 tmp
-# .svelte-kit
-
-# Ignore package manager lock files
-yarn.lock
-package-lock.json
-.pnp.*
 
 # Ignore development tools and configs
 .editorconfig
