@@ -3,11 +3,11 @@ FROM node:lts-alpine AS builder
 
 WORKDIR /usr/src/app
 
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+COPY package.json package-lock.json ./
+RUN npm ci
 
 COPY . .
-RUN yarn build
+RUN npm run build
 
 # Production stage
 FROM node:lts-alpine
@@ -16,9 +16,9 @@ WORKDIR /usr/src/app
 
 COPY --from=builder /usr/src/app/build build/
 COPY --from=builder /usr/src/app/package.json .
-COPY --from=builder /usr/src/app/yarn.lock .
+COPY --from=builder /usr/src/app/package-lock.json .
 
-RUN yarn install --frozen-lockfile --production
+RUN npm ci --production
 
 EXPOSE 8480
 
